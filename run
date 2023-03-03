@@ -1,0 +1,18 @@
+#!/bin/bash
+
+clear
+
+args=("$@")
+ELEMENTS=${#args[@]}
+
+echo
+echo
+echo  Incoming ARG Count:  ${#args[@]}
+echo
+echo "$@"
+echo
+echo    ...
+
+cd target
+java -jar notifer.jar "$@"
+cd -
